@@ -1,0 +1,31 @@
+﻿@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Localization;
+@using LiveChat;
+
+@Html.StyleSheet(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.Kendo.styles.kendo_default_min.css"))
+@Html.StyleSheet(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.Kendo.styles.kendo_common_min.css"))
+@Html.Script(ScriptRef.JQuery)
+@Html.Script(ScriptRef.AngularJS)
+@Html.Script(ScriptRef.KendoAll, "top")
+@Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.Kendo.kendo.web.min.js"))
+@Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.Kendo.kendo.angular.min.js"))
+
+@Html.StyleSheet(Url.WidgetContent("Mvc/css/livechat.css"), "bottom")
+
+<div>
+
+    <div class="container livechat-container">
+        
+        <p id="beforesignin">To enable LiveChat, SignIn to your LiveChat account</p>
+        <div id="license-email">@ViewBag.Email</div>
+        <iframe id="login-with-livechat" src="link https://addons.livechatinc.com/sign-in-with-livechat/sitefinity/?a=xjbRsOKZR&utm_source=progress.com"></iframe>
+        <button id="logout" type="button">Logout</button>
+        <div id="license-id">@ViewBag.License</div>
+        <a href="https://www.livechatinc.com/?a=xjbRsOKZR&utm_source=progress.com" id="learnmore" target="_blank">Learn more about LiveChat</a>
+        <!--When using Url.WidgetContent to load JS, it's getting executed before this HTML loads, even if I set the section to bottom. Hopefully this is alright! -->
+        <script src="/Frontend-Assembly/LiveChat/Mvc/Scripts/livechat-helper.js" type="text/javascript"></script>
+
+    </div>
+
+</div>

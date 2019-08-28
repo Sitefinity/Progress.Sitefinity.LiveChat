@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>Telerik.Sitefinity.LiveChat</id>
+		<version>12.0.7000</version>
+    <title>Telerik.Sitefinity.LiveChat</title>
+    <description>LiveChat Module for Sitefinty</description>
+		<authors>Saikrishna Teja Bobba</authors>
+		<owners>Saikrishna Teja Bobba</owners>
+		<iconUrl>http://www.sitefinity.com/sitefinityImages/default-source/sitefinity-nuget/progresslogo.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<copyright>Progress 2019</copyright>
+		<language>en-US</language>
+		<tags>Progress Sitefinity</tags>
+	
+		<dependencies>
+      <dependency id="Telerik.Sitefinity.Core" version="12.0.7000" />
+      <dependency id="Telerik.Sitefinity.Dashboard" version="12.0.7000" />
+      <dependency id="Telerik.Sitefinity.Feather.Core" version="12.0.7000" />
+      <dependency id="Telerik.Sitefinity.Mvc" version="12.0.7000" />
+		</dependencies>	
+	</metadata>
+  
+	<files>
+		<file src="bin\LiveChat.dll" target="lib\net472" />
+	</files>
+</package>
