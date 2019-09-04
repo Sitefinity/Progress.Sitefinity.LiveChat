@@ -1,10 +1,11 @@
 ﻿/* ------------------------------------------------------------------------------
 author: Saikrishna Teja Bobba
 ------------------------------------------------------------------------------ */
-//Restore if using another browser
+//Summary: Restore if using another browser
 var lc_email = document.getElementById('license-email').innerText;
 var lc_licenseid = document.getElementById('license-id').innerText;
 
+//Summary: Show Sign In flow if user not logged in or logged out.
 function showSignIn() {
     document.getElementById('login-with-livechat').style.display = 'block';
     document.getElementById('logout').style.display = 'none';
@@ -14,6 +15,7 @@ function showSignIn() {
     document.getElementById('beforesignin').style.display = 'block';
 }
 
+//Summary: Show Logout flow, if user signed into LiveChat
 function showLogout(in_email) {
     document.getElementById('login-with-livechat').style.display = 'none';
     document.getElementById('logout').style.display = 'block';
@@ -22,6 +24,7 @@ function showLogout(in_email) {
     document.getElementById('beforesignin').style.display = 'none';
 }
 
+
 if (lc_email != '0' && lc_licenseid != '0') {
     showLogout(lc_email)
 } else {
@@ -29,10 +32,11 @@ if (lc_email != '0' && lc_licenseid != '0') {
 }
 
 
-// Returns a reference to the element by its ID, for child iframe and logout button
+//Returns a reference to the element by its ID, for child iframe and logout button
 var logoutButton = document.getElementById('logout');
 var iframeEl = document.getElementById('login-with-livechat');
 
+//Summary: Attach event handlers.
 function bindEvent(element, eventName, eventHandler) {
     if (element.addEventListener) {
         element.addEventListener(eventName, eventHandler, false);
@@ -43,7 +47,7 @@ function bindEvent(element, eventName, eventHandler) {
 }
 
 
-    // Listen to message from child iframe: logged-in or signed-out
+// Summary: Listen to message from child iframe: logged-in or signed-out
 bindEvent(window, 'message', function (e) {
     var lcDetails = null;
 
@@ -75,7 +79,6 @@ bindEvent(window, 'message', function (e) {
         }
     }
 });
-
 
 // bind button to send message to child frame with msg: logout
 bindEvent(logoutButton, 'click', function (e) {
