@@ -1,6 +1,3 @@
-/* ------------------------------------------------------------------------------
-author: Saikrishna Teja Bobba
------------------------------------------------------------------------------- */
 
 using System;
 using Telerik.Sitefinity;
@@ -18,8 +15,6 @@ using Telerik.Sitefinity.Modules.Pages.Configuration;
 using Telerik.Sitefinity.Mvc.Proxy;
 using Telerik.Sitefinity.Web.Events;
 using System.Web.UI;
-//using LiveChat.Database.Model;
-//using LiveChat.Database;
 
 namespace LiveChat
 {
@@ -34,7 +29,13 @@ namespace LiveChat
 
         public const string LiveChatVirtualPath = "~/LiveChat/";
         #endregion
-        
+
+        /// <summary>
+        /// Provide the GUID of the desired landing page for your module
+        /// The LandingPageId specifies which is the default module page
+        /// This is the entry point for the module UI.It is usually added under the Administration menu
+        /// Some modules may not have landing pages, or have them hiddedn, depending on the use case scenario
+        /// </summary>
         public override Guid LandingPageId
         {
             get
@@ -42,7 +43,13 @@ namespace LiveChat
                 return LiveChatPageId;
             }
         }
-        
+
+
+
+        /// <summary>
+        /// The install method is called initially, when LiveChat module is added to your Sitefinity website
+        /// Here you can install your module configurations, add the module pages and widgets
+        /// </summary>
         public override void Install(SiteInitializer initializer)
         {
             initializer.Installer
@@ -79,6 +86,9 @@ namespace LiveChat
                     .Done();
         }
 
+        /// <summary>
+        /// Initializing the LiveChat Module when sitefinity is started or re-started
+        /// </summary>
         public override void Initialize(ModuleSettings settings)
         {
             base.Initialize(settings);
@@ -90,11 +100,20 @@ namespace LiveChat
             
         }
 
+        /// <summary>
+        /// Subscribe to Page Pre-Render Complete Event.
+        /// </summary>
         public override void Load()
         {
             EventHub.Subscribe<IPagePreRenderCompleteEvent>(new SitefinityEventHandler<IPagePreRenderCompleteEvent>(this.OnPagePreRenderCompleteEventHandler));
         }
 
+
+        /// <summary>
+        /// On Page Pre-render complete event, inject LiveChat script to the page. 
+        /// Read the License information from Configuration - if user has signed in to their LiveChat account, these values will be set and you should enable LiveChat.
+        /// If they haven't signed-in, do not add LiveChat script to the page.
+        /// </summary>
         private void OnPagePreRenderCompleteEventHandler(IPagePreRenderCompleteEvent @event)
         {
             
@@ -122,12 +141,22 @@ namespace LiveChat
             }
         }
 
-        
+        /// <summary>
+        /// Loading LiveChatConfig to facilitate storing LicenseID and Email from LiveChat.
+        /// The actual implementation is set separated in a separate config class
+        /// In this case the /Config/LiveChatConfig.cs is used as we need config to store licenseid and email.
+        /// </summary>
         protected override ConfigSection GetModuleConfig()
         {
             return Telerik.Sitefinity.Configuration.Config.Get<LiveChatConfig>();
         }
 
+        /// <summary>
+        /// Provide a list of managers your module will be working with
+        /// It might be your own managers or default Sitefinity ones
+        /// Sitefintiy CMS uses this collection to make sure the managers (and their respective providers) are initialized
+        /// This way you can safely work with the managers inside your module logic
+        /// </summary>
         public override Type[] Managers
         {
             get { return new Type[] { typeof(PageManager) }; }
