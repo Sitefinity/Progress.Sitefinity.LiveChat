@@ -4,6 +4,9 @@
 
 The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat functionality into your Sitefinity website. Engage with your customers in real-time while they’re visiting your website so that you can solve problems and answer questions instantly. 
 
+### Sign Up for LiveChat
+1. If you don't have an account for LiveChat, Please [Signup](https://www.livechatinc.com/?a=xjbRsOKZR&utm_source=progress.com)
+
 ### Install module
 
 1. You can install the module by either   
