@@ -38,7 +38,7 @@ The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat 
 <img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/4.PNG" height="500px"/>
 
 5. That's it, you have enabled LiveChat on Sitefinity. Go to your home page to see LiveChat in action.
-<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/6.PNG" width="300px"/>
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/6.PNG" width="500px"/>
 
 
 ### Disable LiveChat on Sitefinity
