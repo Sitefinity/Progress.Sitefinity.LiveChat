@@ -16,10 +16,11 @@
 <div>
 
     <div class="container livechat-container">
-        
+        @Html.AntiForgeryToken()
+
         <p id="beforesignin">To enable LiveChat, SignIn to your LiveChat account</p>
         <div id="license-email">@ViewBag.Email</div>
-        <iframe id="login-with-livechat" src="link https://addons.livechatinc.com/sign-in-with-livechat/sitefinity/?a=xjbRsOKZR&utm_source=progress.com"></iframe>
+        <iframe id="login-with-livechat" src="https://addons.livechatinc.com/sign-in-with-livechat/sitefinity/?a=xjbRsOKZR&utm_source=progress.com"></iframe>
         <button id="logout" type="button">Logout</button>
         <div id="license-id">@ViewBag.License</div>
         <a href="https://www.livechatinc.com/?a=xjbRsOKZR&utm_source=progress.com" id="learnmore" target="_blank">Learn more about LiveChat</a>

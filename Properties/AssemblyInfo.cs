@@ -1,6 +1,10 @@
-using LiveChat;
+// <copyright file="AssemblyInfo.cs" company="Progress Software Corporation">
+// Copyright (c) Progress Software Corporation. All rights reserved.
+// </copyright>
+
 using System.Reflection;
 using System.Runtime.InteropServices;
+using LiveChat;
 using Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.Attributes;
 using Telerik.Sitefinity.Services;
 
@@ -10,10 +14,10 @@ using Telerik.Sitefinity.Services;
 [assembly: AssemblyTitle("LiveChat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Progress")]
+[assembly: AssemblyCompany("Progress Software Corporation")]
 [assembly: AssemblyProduct("LiveChat")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("Sitefinity")]
+[assembly: AssemblyTrademark("Progress")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

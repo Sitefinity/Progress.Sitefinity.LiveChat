@@ -1,14 +1,12 @@
-/* ------------------------------------------------------------------------------
-author: Saikrishna Teja Bobba
------------------------------------------------------------------------------- */
-
-using System.Collections.Specialized;
-using System.Configuration;
-using Telerik.Sitefinity.Configuration;
-
+// <copyright file="LiveChatConfig.cs" company="Progress Software Corporation">
+// Copyright (c) Progress Software Corporation. All rights reserved.
+// </copyright>
 
 namespace LiveChat.Config
 {
+    using System.Configuration;
+    using Telerik.Sitefinity.Configuration;
+
     /// <summary>
     /// Defines module configuration settings.
     /// </summary>
@@ -21,6 +19,7 @@ namespace LiveChat.Config
             {
                 return (string)this["licenseID"];
             }
+
             set
             {
                 this["licenseID"] = value;
@@ -34,11 +33,11 @@ namespace LiveChat.Config
             {
                 return (string)this["email"];
             }
+
             set
             {
                 this["email"] = value;
             }
         }
-
     }
 }

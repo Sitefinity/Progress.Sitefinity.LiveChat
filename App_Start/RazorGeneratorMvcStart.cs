@@ -1,10 +1,14 @@
-﻿using System.Web;
+// <copyright file="RazorGeneratorMvcStart.cs" company="Progress Software Corporation">
+// Copyright (c) Progress Software Corporation. All rights reserved.
+// </copyright>
+
+using System.Web;
 using System.Web.Mvc;
 using System.Web.WebPages;
 using RazorGenerator.Mvc;
 
-
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(LiveChat.RazorGeneratorMvcStart), "Start")]
+
 namespace LiveChat
 {
     public static class RazorGeneratorMvcStart
@@ -13,11 +17,12 @@ namespace LiveChat
         {
             var engine = new PrecompiledMvcEngine(typeof(RazorGeneratorMvcStart).Assembly)
             {
-                UsePhysicalViewsIfNewer = HttpContext.Current.Request.IsLocal
+                UsePhysicalViewsIfNewer = HttpContext.Current.Request.IsLocal,
             };
 
             ViewEngines.Engines.Insert(0, engine);
 
+            // StartPage lookups are done by WebPages.
             VirtualPathFactoryManager.RegisterVirtualPathFactory(engine);
         }
     }

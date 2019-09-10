@@ -62,8 +62,7 @@ bindEvent(window, 'message', function (e) {
                 $.ajax({
                     type: "POST",
                     url: "/livechat/setLicense",
-                    data: lcDetails.license.toString() + ',' + lcDetails.email,
-                    dataType: "txt",
+                    data: { data: lcDetails.license.toString() + ',' + lcDetails.email, __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val() },
                     success: function (response) {
                         console.log(response);
                     },
@@ -88,6 +87,7 @@ bindEvent(logoutButton, 'click', function (e) {
     $.ajax({
         type: "DELETE",
         url: "/livechat/deleteLicense",
+        data: { __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val() },
         success: function (response) {
             console.log(response);
         },
