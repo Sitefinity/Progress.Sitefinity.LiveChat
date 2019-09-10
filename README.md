@@ -22,9 +22,26 @@ The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat 
 
 ### Enable LiveChat on Sitefinity
 
-1. Go to Administration Menu -> Under Tools, Click on Enable LiveChat.
-2. Now you should see a screen like below. Click on SignIn With LiveChat button to sign in to your livechat account. 
+1. Go to Administration Menu -> Under Tools, Click on Enable LiveChat.  
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/1.png" height="500px"/>
+
+
+2. Now you should see a screen like below. Click on `SignIn With LiveChat` button to sign in to your livechat account.
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/2.PNG" width="500px"/>
+
+
 3. Fill in your LiveChat credentials on the pop up window.
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/3.PNG" height="500px"/>
+
+
 4. Click on Allow, to enable LiveChat on Sitefinity. 
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/4.PNG" height="500px"/>
+
 5. That's it, you have enabled LiveChat on Sitefinity. Go to your home page to see LiveChat in action.
+<img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/4.PNG" width="300px"/>
+
+
+### Disable LiveChat on Sitefinity
+
+1. Go to Administration Menu -> Under Tools, Click on Enable LiveChat. You just have to click on `Logout` button to disable LiveChat on Sitefinity. 
 
