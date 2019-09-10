@@ -13,4 +13,18 @@ The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat 
 
 2. The module is self-installable thanks to the SitefinityModuleAttribute defined in the project's Assemplyinfo.cs file
 
-### Edit WebSecurity
+### Add LiveChat to Trusted Sources
+
+1. For LiveChat to function properly, you need to add `*.livechatinc.com` to your trusted sources.  
+2. To do that, Go to Settings -> Web security -> Trusted Sources and click on Edit.
+3. Add `*.livechatinc.com` to Scripts, Styles, Fonts, Images, Child Sources, Connect sources. 
+4. Click on Done to save the settings. 
+
+### Enable LiveChat on Sitefinity
+
+1. Go to Administration Menu -> Under Tools, Click on Enable LiveChat.
+2. Now you should see a screen like below. Click on SignIn With LiveChat button to sign in to your livechat account. 
+3. Fill in your LiveChat credentials on the pop up window.
+4. Click on Allow, to enable LiveChat on Sitefinity. 
+5. That's it, you have enabled LiveChat on Sitefinity. Go to your home page to see LiveChat in action.
+
