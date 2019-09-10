@@ -15,9 +15,9 @@
     <tags>livechat chat sitefinity</tags>
 
     <dependencies>
-      <dependency id="Telerik.Sitefinity.Core" version="12.1.7122" />
-      <dependency id="Telerik.Sitefinity.Feather.Core" version="12.1.7122" />
-      <dependency id="Telerik.Sitefinity.Mvc" version="12.1.7122" />
+      <dependency id="Telerik.Sitefinity.Core" version="12.1.7100" />
+      <dependency id="Telerik.Sitefinity.Feather.Core" version="12.1.7100" />
+      <dependency id="Telerik.Sitefinity.Mvc" version="12.1.7100" />
     </dependencies>
   </metadata>
 
