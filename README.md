@@ -43,6 +43,11 @@ The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat 
 5. That's it, you have enabled LiveChat on Sitefinity. Go to your home page to see LiveChat in action.
 <img src="https://raw.githubusercontent.com/saiteja09/Telerik.Sitefinity.LiveChat/master/Screenshots/6.PNG" width="500px"/>
 
+### Enable LiveChat on Sitefinity - Manual
+
+1. If you have a LicenseId from Livechat, you can manually enable LiveChat on Sitefinity.  
+2. Go to Settings->Advanced->LiveChat and paste your LicenseID and Email. 
+3. Click on Save Changes to enable LiveChat. If your LicenseID is valid, you should see LiveChat enabled on your website.
 
 ### Disable LiveChat on Sitefinity
 
