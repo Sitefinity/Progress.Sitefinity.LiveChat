@@ -10,8 +10,8 @@ The LiveChat Sitefinity integration allows you to seamlessly integrate LiveChat 
 ### Install module
 
 1. You can install the module by either   
-    a. Installing the nuget `Telerik.Sitefinity.LiveChat`, by running the below command  
-        `Install-Package Telerik.Sitefinity.LiveChat`  
+    a. Installing the nuget `Progress.Sitefinity.LiveChat`, by running the below command  
+        `Install-Package Progress.Sitefinity.LiveChat`  
     b. Or Cloning the project to your machine, build the solution and copy `LiveChat.dll` from the bin folder to your Sitefinity Web App's bin folder. 
 
 2. The module is self-installable thanks to the SitefinityModuleAttribute defined in the project's Assemplyinfo.cs file
