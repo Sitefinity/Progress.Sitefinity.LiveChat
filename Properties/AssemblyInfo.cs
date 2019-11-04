@@ -14,9 +14,9 @@ using Telerik.Sitefinity.Services;
 [assembly: AssemblyTitle("LiveChat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Progress Software Corporation")]
-[assembly: AssemblyProduct("LiveChat")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("Progress")]
+[assembly: AssemblyProduct("Progress Sitefinity CMS")]
+[assembly: AssemblyCopyright("Copyright © 2005-2019 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("Progress")]
 [assembly: AssemblyCulture("")]
 
@@ -38,8 +38,8 @@ using Telerik.Sitefinity.Services;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
 
 [assembly: SitefinityModule("LiveChat", typeof(LiveChatModule), "LiveChat for Sitefinity", "Chat with your customers, send their details to your CRM, manage their orders and accept their payments – all that without leaving the Sitefinity interface.", StartupType.OnApplicationStart)]
 [assembly: ControllerContainer]
