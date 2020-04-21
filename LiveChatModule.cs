@@ -25,6 +25,8 @@ namespace LiveChat
     /// </summary>
     public class LiveChatModule : ModuleBase
     {
+        private string email;
+        private string licenseId;
         public const string LiveChatPageName = "Enable LiveChat";
         public const string ModuleName = "LiveChatModule";
         public const string LiveChatVirtualPath = "~/LiveChat/";
@@ -56,6 +58,34 @@ namespace LiveChat
             get
             {
                 return new Type[] { typeof(PageManager) };
+            }
+        }
+
+        private string Email
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.email))
+                {
+                    var config = Telerik.Sitefinity.Configuration.Config.Get<LiveChatConfig>();
+                    this.email = config.Email;
+                }
+
+                return this.email;
+            }
+        }
+
+        private string LicenseID
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.licenseId))
+                {
+                    var config = Telerik.Sitefinity.Configuration.Config.Get<LiveChatConfig>();
+                    this.licenseId = config.LicenseID;
+                }
+
+                return this.licenseId;
             }
         }
 
@@ -143,14 +173,10 @@ namespace LiveChat
         /// </summary>
         private void OnPagePreRenderCompleteEventHandler(IPagePreRenderCompleteEvent @event)
         {
-            var config = Telerik.Sitefinity.Configuration.Config.Get<LiveChatConfig>();
-            string license = config.LicenseID;
-            string email = config.Email;
-
-            if (license != "0" || email != "0")
+            if (!@event.Page.IsBackend() && (this.LicenseID != "0" || this.Email != "0"))
             {
                 // Apply LicenseID to Script
-                string livechatURL = "https://www.livechatinc.com/chat-with/" + license;
+                string livechatURL = "https://www.livechatinc.com/chat-with/" + this.LicenseID;
                 string liveChatScriptTemplate = @"
                                         <script type = 'text/javascript' >
                                            window.__lc = window.__lc || {{}};
@@ -161,7 +187,7 @@ namespace LiveChat
                                                         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
                                                     }})();
                                         </script>";
-                string liveChatScript = string.Format(CultureInfo.InvariantCulture, liveChatScriptTemplate, license);
+                string liveChatScript = string.Format(CultureInfo.InvariantCulture, liveChatScriptTemplate, this.LicenseID);
 
                 @event.Page.Header.Controls.Add(new LiteralControl(liveChatScript));
             }
