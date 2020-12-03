@@ -38,8 +38,8 @@ using Telerik.Sitefinity.Services;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.3.0")]
-[assembly: AssemblyFileVersion("1.0.3.0")]
+[assembly: AssemblyVersion("1.0.5.0")]
+[assembly: AssemblyFileVersion("1.0.5.0")]
 
 [assembly: SitefinityModule("LiveChat", typeof(LiveChatModule), "LiveChat for Sitefinity", "Chat with your customers, send their details to your CRM, manage their orders and accept their payments – all that without leaving the Sitefinity interface.", StartupType.OnApplicationStart)]
 [assembly: ControllerContainer]
