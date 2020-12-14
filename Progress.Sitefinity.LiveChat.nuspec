@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Progress.Sitefinity.LiveChat</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <title>Progress.Sitefinity.LiveChat</title>
     <description>LiveChat Module for Progress Sitefinty CMS</description>
     <authors>Progress Software Corporation</authors>
@@ -15,14 +15,14 @@
     <tags>livechat chat sitefinity</tags>
 
     <dependencies>
-      <dependency id="Telerik.Sitefinity.Core" version="13.1.7400" />
-      <dependency id="Telerik.Sitefinity.Feather.Core" version="13.1.7400" />
-      <dependency id="Telerik.Sitefinity.Mvc" version="13.1.7400" />
+      <dependency id="Telerik.Sitefinity.Core" version="13.2.7500" />
+      <dependency id="Telerik.Sitefinity.Feather.Core" version="13.2.7500" />
+      <dependency id="Telerik.Sitefinity.Mvc" version="13.2.7500" />
     </dependencies>
   </metadata>
 
   <files>
-    <file src="bin\LiveChat.dll" target="lib\net472" />
+    <file src="bin\LiveChat.dll" target="lib\net480" />
 	<file src="LicenseAgreements\License.txt" target="LicenseAgreements" />
   </files>
 </package>
