@@ -1,6 +1,8 @@
 ﻿@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
 @using Telerik.Sitefinity.Modules.Pages;
 @using Telerik.Sitefinity.Localization;
+@using Telerik.Sitefinity.Abstractions;
+@using Telerik.Sitefinity.Security.CSRF;
 @using LiveChat;
 
 @Html.StyleSheet(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.Kendo.styles.kendo_default_min.css"))
@@ -16,7 +18,7 @@
 <div>
 
     <div class="container livechat-container">
-        @Html.AntiForgeryToken()
+        @Html.AddSitefinityAntiforgeryToken()
 
         <p id="beforesignin">To enable LiveChat, SignIn to your LiveChat account</p>
         <div id="license-email">@ViewBag.Email</div>
